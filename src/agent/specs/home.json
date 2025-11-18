@@ -1,0 +1,184 @@
+{
+  "type": "page",
+  "children": [
+    {
+      "type": "header",
+      "children": [
+        {
+          "type": "text",
+          "props": {
+            "value": "Skip to main content"
+          }
+        },
+        {
+          "type": "button",
+          "props": {
+            "value": "Create"
+          }
+        },
+        {
+          "type": "text",
+          "props": {
+            "value": "Search"
+          }
+        }
+      ]
+    },
+    {
+      "type": "sidebar",
+      "children": [
+        {
+          "type": "list",
+          "children": [
+            {
+              "type": "text",
+              "props": {
+                "value": "Home"
+              }
+            },
+            {
+              "type": "text",
+              "props": {
+                "value": "My tasks"
+              }
+            },
+            {
+              "type": "text",
+              "props": {
+                "value": "Inbox"
+              }
+            },
+            {
+              "type": "text",
+              "props": {
+                "value": "Insights"
+              }
+            },
+            {
+              "type": "text",
+              "props": {
+                "value": "Reporting"
+              }
+            },
+            {
+              "type": "text",
+              "props": {
+                "value": "Portfolios"
+              }
+            },
+            {
+              "type": "text",
+              "props": {
+                "value": "Goals"
+              }
+            },
+            {
+              "type": "text",
+              "props": {
+                "value": "Projects"
+              }
+            },
+            {
+              "type": "text",
+              "props": {
+                "value": "Cross-functional project plan"
+              }
+            },
+            {
+              "type": "text",
+              "props": {
+                "value": "Team"
+              }
+            },
+            {
+              "type": "text",
+              "props": {
+                "value": "My workspace"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "container",
+      "children": [
+        {
+          "type": "text",
+          "props": {
+            "value": "Good morning, Leila"
+          }
+        },
+        {
+          "type": "grid",
+          "children": [
+            {
+              "type": "card",
+              "children": [
+                {
+                  "type": "text",
+                  "props": {
+                    "value": "My week"
+                  }
+                },
+                {
+                  "type": "text",
+                  "props": {
+                    "value": "0123456789 tasks completed"
+                  }
+                },
+                {
+                  "type": "text",
+                  "props": {
+                    "value": "0123456789 collaborators"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "card",
+              "children": [
+                {
+                  "type": "text",
+                  "props": {
+                    "value": "Create task"
+                  }
+                },
+                {
+                  "type": "text",
+                  "props": {
+                    "value": "Draft project brief"
+                  }
+                },
+                {
+                  "type": "text",
+                  "props": {
+                    "value": "Cross-functional project plan"
+                  }
+                },
+                {
+                  "type": "text",
+                  "props": {
+                    "value": "Due date: 16 Nov – Today"
+                  }
+                },
+                {
+                  "type": "text",
+                  "props": {
+                    "value": "Schedule kickoff meeting"
+                  }
+                },
+                {
+                  "type": "text",
+                  "props": {
+                    "value": "Due date: 17 – 19 Nov"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

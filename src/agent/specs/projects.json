@@ -1,0 +1,40 @@
+{
+  "pageName": "Asana Projects",
+  "layout": {
+    "type": "page",
+    "sections": [
+      {
+        "type": "nav",
+        "props": { "title": "Projects" }
+      },
+      {
+        "type": "main",
+        "children": [
+          {
+            "type": "section-title",
+            "props": { "text": "My Projects" }
+          },
+          {
+            "type": "card-list",
+            "props": {
+              "items": [
+                {
+                  "title": "Marketing Plan",
+                  "desc": "Campaign strategy"
+                },
+                {
+                  "title": "Product Launch",
+                  "desc": "New features release"
+                },
+                {
+                  "title": "Sales Dashboard",
+                  "desc": "Reporting & metrics"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

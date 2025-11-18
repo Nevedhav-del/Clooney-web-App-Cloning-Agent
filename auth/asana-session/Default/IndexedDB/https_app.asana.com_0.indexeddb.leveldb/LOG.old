@@ -1,0 +1,29 @@
+2025/11/18-11:04:22.661 16eac6 Reusing MANIFEST /Users/dark/Freelance/clooney-asana-agent/auth/asana-session/Default/IndexedDB/https_app.asana.com_0.indexeddb.leveldb/MANIFEST-000001
+2025/11/18-11:04:22.662 16eac6 Recovering log #128
+2025/11/18-11:04:22.676 16eac6 Reusing old log /Users/dark/Freelance/clooney-asana-agent/auth/asana-session/Default/IndexedDB/https_app.asana.com_0.indexeddb.leveldb/000128.log 
+2025/11/18-11:04:23.689 16ead2 Level-0 table #135: started
+2025/11/18-11:04:23.715 16ead2 Level-0 table #135: 2883465 bytes OK
+2025/11/18-11:04:23.717 16ead2 Delete type=0 #128
+2025/11/18-11:04:23.720 16ead2 Compacting 1@1 + 3@2 files
+2025/11/18-11:04:23.747 16ead2 Generated table #136@1: 12529 keys, 2143749 bytes
+2025/11/18-11:04:23.789 16ead2 Generated table #137@1: 34840 keys, 2195220 bytes
+2025/11/18-11:04:23.795 16ead2 Generated table #138@1: 298 keys, 1360668 bytes
+2025/11/18-11:04:23.795 16ead2 Compacted 1@1 + 3@2 files => 5699637 bytes
+2025/11/18-11:04:23.797 16ead2 compacted to: files[ 0 0 3 0 0 0 0 ]
+2025/11/18-11:04:23.797 16ead2 Delete type=2 #135
+2025/11/18-11:04:23.797 16ead2 Delete type=2 #131
+2025/11/18-11:04:23.797 16ead2 Delete type=2 #130
+2025/11/18-11:04:23.797 16ead2 Delete type=2 #132
+2025/11/18-11:04:23.888 16ead2 Level-0 table #140: started
+2025/11/18-11:04:23.910 16ead2 Level-0 table #140: 2609989 bytes OK
+2025/11/18-11:04:23.912 16ead2 Delete type=0 #134
+2025/11/18-11:04:24.281 16ead2 Compacting 1@1 + 3@2 files
+2025/11/18-11:04:24.355 16ead2 Generated table #141@1: 15551 keys, 2150768 bytes
+2025/11/18-11:04:24.405 16ead2 Generated table #142@1: 31362 keys, 2194934 bytes
+2025/11/18-11:04:24.411 16ead2 Generated table #143@1: 295 keys, 1227923 bytes
+2025/11/18-11:04:24.411 16ead2 Compacted 1@1 + 3@2 files => 5573625 bytes
+2025/11/18-11:04:24.412 16ead2 compacted to: files[ 0 0 3 0 0 0 0 ]
+2025/11/18-11:04:24.412 16ead2 Delete type=2 #138
+2025/11/18-11:04:24.412 16ead2 Delete type=2 #140
+2025/11/18-11:04:24.412 16ead2 Delete type=2 #137
+2025/11/18-11:04:24.412 16ead2 Delete type=2 #136

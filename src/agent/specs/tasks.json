@@ -1,0 +1,40 @@
+{
+  "pageName": "Asana Tasks",
+  "layout": {
+    "type": "page",
+    "sections": [
+      {
+        "type": "nav",
+        "props": { "title": "Tasks" }
+      },
+      {
+        "type": "main",
+        "children": [
+          {
+            "type": "section-title",
+            "props": { "text": "My Tasks" }
+          },
+          {
+            "type": "task-list",
+            "props": {
+              "items": [
+                {
+                  "title": "Review PR #42",
+                  "status": "In Progress"
+                },
+                {
+                  "title": "Design landing page",
+                  "status": "Not Started"
+                },
+                {
+                  "title": "Fix mobile layout",
+                  "status": "Completed"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

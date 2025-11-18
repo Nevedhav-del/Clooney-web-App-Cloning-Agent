@@ -1,0 +1,17 @@
+2025/11/18-11:05:42.318 16f32e Reusing MANIFEST /Users/dark/Freelance/clooney-asana-agent/auth/asana-session/Default/IndexedDB/https_app.asana.com_0.indexeddb.leveldb/MANIFEST-000001
+2025/11/18-11:05:42.318 16f32e Recovering log #139
+2025/11/18-11:05:42.321 16f32e Reusing old log /Users/dark/Freelance/clooney-asana-agent/auth/asana-session/Default/IndexedDB/https_app.asana.com_0.indexeddb.leveldb/000139.log 
+2025/11/18-11:05:43.369 16f32d Level-0 table #146: started
+2025/11/18-11:05:43.385 16f32d Level-0 table #146: 2915668 bytes OK
+2025/11/18-11:05:43.388 16f32d Delete type=0 #139
+2025/11/18-11:05:43.390 16f32d Compacting 1@1 + 3@2 files
+2025/11/18-11:05:43.406 16f32d Generated table #147@1: 9178 keys, 2134510 bytes
+2025/11/18-11:05:43.435 16f32d Generated table #148@1: 36262 keys, 2184655 bytes
+2025/11/18-11:05:43.445 16f32d Generated table #149@1: 10445 keys, 2136786 bytes
+2025/11/18-11:05:43.447 16f32d Generated table #150@1: 275 keys, 315841 bytes
+2025/11/18-11:05:43.447 16f32d Compacted 1@1 + 3@2 files => 6771792 bytes
+2025/11/18-11:05:43.448 16f32d compacted to: files[ 0 0 4 0 0 0 0 ]
+2025/11/18-11:05:43.448 16f32d Delete type=2 #141
+2025/11/18-11:05:43.448 16f32d Delete type=2 #143
+2025/11/18-11:05:43.448 16f32d Delete type=2 #142
+2025/11/18-11:05:43.448 16f32d Delete type=2 #146

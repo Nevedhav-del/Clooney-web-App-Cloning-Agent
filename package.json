@@ -2,26 +2,40 @@
   "name": "clooney-asana-agent",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "generate": "ts-node --esm src/agent/cli/generatePage.ts",
+    "llm:test": "ts-node --esm src/agent/cli/testLLM.ts",
+    "scrape": "ts-node --esm src/agent/cli/scrapeAndConvert.ts",
+    "auth:asana": "ts-node --esm src/agent/cli/login.ts",
+    "repair": "ts-node --esm src/agent/cli/repair.ts",
+    "login": "ts-node --esm src/agent/cli/login.ts"
   },
   "dependencies": {
+    "@playwright/test": "^1.56.1",
+    "dotenv": "^17.2.3",
     "next": "16.0.3",
+    "openai": "^6.9.0",
     "react": "19.2.0",
     "react-dom": "19.2.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
+    "@types/node": "^20.19.25",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "babel-plugin-react-compiler": "1.0.0",
     "eslint": "^9",
     "eslint-config-next": "16.0.3",
+    "pixelmatch": "^7.1.0",
+    "playwright": "^1.56.1",
+    "pngjs": "^7.0.0",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
   }
 }

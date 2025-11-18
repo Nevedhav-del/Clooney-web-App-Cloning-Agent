@@ -1,36 +1,119 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Clooney Asana Agent — Pipeline Documentation
 
-## Getting Started
+This project extracts UI from Asana, converts it into a clean UI specification, generates components, and validates them using visual regression testing. The workflow is built on a predictable four-layer pipeline.
 
-First, run the development server:
+Installation and Setup
+1. Install dependencies
+npm install
 
-```bash
+2. Start the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Scrape a page (example: Asana Home)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+This command loads Asana in a headless browser, waits for the UI to fully render, removes loading states, and extracts DOM nodes with bounding boxes.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+npm run scrape https://app.asana.com/0/home home
 
-## Learn More
+4. Generate UI components from the scraped specification
 
-To learn more about Next.js, take a look at the following resources:
+This converts the cleaned DOM into a structured UI specification and generates components.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+npm run generate home
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+5. Update Playwright visual snapshots
 
-## Deploy on Vercel
+Run this once to establish baseline snapshots needed for visual regression.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+npx playwright test tests/visual/home-generated.spec.ts --update-snapshots
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+6. Run auto-repair based on visual regression
+
+This compares the generated UI to the real Asana UI using Pixelmatch.
+If similarity is below 98%, the system automatically repairs the generated components and re-runs tests.
+
+npm run repair home
+
+Final Structure: Rock-Solid Pipeline
+
+Your agent is divided into four dependable layers. Each layer has a clear responsibility and produces a clean output for the next stage.
+
+1. Scraper Layer
+
+Purpose: Extract the real, fully rendered UI from Asana.
+
+Responsibilities:
+
+Load Asana
+
+Wait for real UI to render (post-hydration)
+
+Remove loading screens and placeholders
+
+Extract clean DOM nodes with bounding boxes
+
+Return only usable UI elements (no scripts, no noise)
+
+Output: scraped/home.json
+
+2. DOM to UI Specification Converter
+
+Purpose: Transform the raw DOM into a stable, minimal, structured UI specification.
+
+Responsibilities:
+
+Classify elements into semantic groups (header, sidebar, main, etc.)
+
+Group nodes based on layout relationships
+
+Remove noise such as tooltips, script tags, animations, hidden nodes
+
+Produce deterministic JSON suitable for generation
+
+Output: specs/home-ui.json
+
+3. UI Generator
+
+Purpose: Convert the UI specification into clean, usable React components.
+
+Responsibilities:
+
+Render nodes based on type
+
+Avoid unnecessary nested <div> wrappers
+
+Normalize spacing, layout, and structure
+
+Output maintainable, production-ready UI components
+
+Output: generated/home/*
+
+4. Visual Regression and Repair Loop
+
+Purpose: Ensure the generated UI matches the real Asana UI as closely as possible.
+
+Responsibilities:
+
+Capture Playwright snapshots
+
+Compare with baseline using Pixelmatch
+
+Trigger repairs only when similarity falls below threshold
+
+Stop automatically when similarity reaches or exceeds 98%
+
+Prevent infinite loops with strict thresholds
+
+Output:
+Regression test file: tests/visual/home-generated.spec.ts
+Repaired UI components during iterations.
+
+Summary of the Workflow
+
+Scrape UI → Real DOM + bounding boxes
+
+Convert DOM → Clean UI specification
+
+Generate UI → Optimized React components
+
+Visual Regression → Auto-repair until stable

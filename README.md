@@ -114,6 +114,9 @@ Scrape UI → Real DOM + bounding boxes
 
 Convert DOM → Clean UI specification
 
+<img width="1281" height="843" alt="Screenshot 2025-11-18 at 11 05 57 AM" src="https://github.com/user-attachments/assets/e7adbee2-175c-4874-9ebf-96e4da8849a8" />
+
+
 Generate UI → Optimized React components
 
 Visual Regression → Auto-repair until stable
